@@ -3,8 +3,8 @@
 #include <SFML/Graphics.hpp>
 
 #include "Engine.h"
-#include "Player.h"
-#include "Ball.h"
+#include "Pong/Player.h"
+#include "Pong/Ball.h"
 
 class PongEngine : public Engine
 {

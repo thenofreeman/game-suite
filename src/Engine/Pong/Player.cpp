@@ -1,5 +1,4 @@
-#include "Player.h"
-#include <iostream>
+#include "Pong/Player.h"
 
 Player::Player()
     : shape{sf::Vector2f(100, 10)},

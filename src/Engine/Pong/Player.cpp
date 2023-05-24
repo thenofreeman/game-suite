@@ -4,8 +4,7 @@
 Player::Player()
     : shape{sf::Vector2f(100, 10)},
       velocity{200, 0}
-{
-}
+{ }
 
 Player::~Player()
 { }

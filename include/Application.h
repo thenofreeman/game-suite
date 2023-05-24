@@ -1,37 +1,30 @@
 #pragma once
 
 #include <string>
-#include <array>
 
 #include <SFML/Graphics.hpp>
 
-#include "Player.h"
-#include "Ball.h"
+#include "StateStack.h"
 
-class Game
+class Application
 {
     public:
-        Game(const std::string& title);
-        virtual ~Game();
+        Application(std::string title, int width, int height);
+        virtual ~Application();
 
         void run();
+        void registerStates();
 
     private:
         std::string title;
         sf::RenderWindow window;
-        sf::Vector2f windowSize;
 
         sf::Time deltaTime;
         sf::Time timePerFrame;
 
-        int scores[2];
-        Player* players[2];
-        Player* localPlayer;
-        Ball ball;
+        StateStack states;
 
         void processEvents();
         void update();
         void render();
-
-        void updatePlayer(Player* pl);
 };

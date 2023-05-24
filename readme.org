@@ -1,0 +1,5 @@
+#+title: Game Suite
+
+** Games
+*** Pong
+*** Snake

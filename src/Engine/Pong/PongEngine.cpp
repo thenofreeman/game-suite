@@ -1,8 +1,8 @@
 #include "PongEngine.h"
 
 PongEngine::PongEngine(sf::RenderWindow& window)
-    : players{new Player(), new Player()},
-      window{&window},
+    : Engine{window},
+      players{new Player(), new Player()},
       localPlayer{players[0]},
       ball{}
 {

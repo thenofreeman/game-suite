@@ -17,12 +17,9 @@ class PongEngine : public Engine
         virtual void draw();
 
     private:
-        sf::RenderWindow* window;
-
         int scores[2];
         Player* players[2];
         Player* localPlayer;
         Ball ball;
-
 
 };

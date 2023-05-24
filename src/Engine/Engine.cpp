@@ -1,6 +1,7 @@
 #include "Engine.h"
 
-Engine::Engine()
+Engine::Engine(sf::RenderWindow& window)
+    : window{&window}
 { }
 
 Engine::~Engine()

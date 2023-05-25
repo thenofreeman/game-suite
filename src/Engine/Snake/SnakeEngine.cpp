@@ -1,4 +1,4 @@
-#include "SnakeEngine.h"
+#include "Snake/SnakeEngine.h"
 
 SnakeEngine::SnakeEngine(sf::RenderWindow& window)
     : Engine{window},

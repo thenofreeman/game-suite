@@ -1,7 +1,7 @@
 #include "GameState.h"
 
-#include "PongEngine.h"
-#include "SnakeEngine.h"
+#include "Pong/PongEngine.h"
+#include "Snake/SnakeEngine.h"
 
 GameState::GameState(StateStack& stack, Context context)
     : State{stack, context},

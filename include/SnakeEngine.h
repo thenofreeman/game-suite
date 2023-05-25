@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Engine.h"
+#include "Snake/Snake.h"
 
 class SnakeEngine : public Engine
 {
@@ -15,5 +16,6 @@ class SnakeEngine : public Engine
         virtual void draw();
 
     private:
+        Snake snake;
 
 };

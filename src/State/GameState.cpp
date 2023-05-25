@@ -1,10 +1,11 @@
 #include "GameState.h"
 
 #include "PongEngine.h"
+#include "SnakeEngine.h"
 
 GameState::GameState(StateStack& stack, Context context)
     : State{stack, context},
-      engine{new PongEngine(*context.window)}
+      engine{new SnakeEngine(*context.window)}
 { }
 
 GameState::~GameState()

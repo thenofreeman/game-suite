@@ -16,8 +16,8 @@ class Snake : public sf::Drawable
         void update(const sf::Time& frameTime);
 
     private:
-        std::list<Block*> body;
-        Block* head;
+        // std::list<Block*> body;
+        Block head;
         sf::Vector2f velocity;
 
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;

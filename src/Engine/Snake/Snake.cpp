@@ -1,8 +1,9 @@
 #include "Snake/Snake.h"
 
+#include <iostream>
+
 Snake::Snake()
-    : body{new Block()},
-      head{body.front()},
+    : head{},
       velocity{100, 100}
 { }
 
@@ -10,46 +11,29 @@ Snake::~Snake()
 { }
 
 void processEvent(const sf::Event& event)
-{
-
-}
+{ }
 
 void Snake::update(const sf::Time& deltaTime)
 {
-    Block* block = body.front();
-
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
     {
-        block->setPosition(block->getPosition().x, block->getPosition().y - velocity.y * deltaTime.asSeconds());
+        head.setPosition(head.getPosition().x, head.getPosition().y - velocity.y * deltaTime.asSeconds());
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
     {
-        block->setPosition(block->getPosition().x, block->getPosition().y + velocity.y * deltaTime.asSeconds());
+        head.setPosition(head.getPosition().x, head.getPosition().y + velocity.y * deltaTime.asSeconds());
     }
-    else
-    { }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
     {
-        block->setPosition(block->getPosition().x - velocity.x * deltaTime.asSeconds(), block->getPosition().y);
+        head.setPosition(head.getPosition().x - velocity.x * deltaTime.asSeconds(), head.getPosition().y);
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
     {
-        block->setPosition(block->getPosition().x + velocity.x * deltaTime.asSeconds(), block->getPosition().y);
-    }
-    else
-    { }
-
-    Block* prev = block;
-    for (Block* block : body)
-    {
-        block->setPosition(prev->getPosition());
-        prev = block;
+        head.setPosition(head.getPosition().x + velocity.x * deltaTime.asSeconds(), head.getPosition().y);
     }
 }
 
 void Snake::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    for (Block* b : body)
-        target.draw(*b);
+    target.draw(head, states);
 }

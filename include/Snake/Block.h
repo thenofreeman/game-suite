@@ -17,9 +17,6 @@ class Block : public sf::Drawable, public sf::Transformable
         // sf::Color color;
         sf::RectangleShape shape;
 
-        sf::Vector2f prevPosition;
-        sf::Vector2i blockSize;
-
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 };

@@ -1,10 +1,10 @@
 #include "Snake/Block.h"
 
 Block::Block()
-    : blockSize{25, 25},
-      shape{}
+    : shape{sf::Vector2f(15.f, 15.f)}
 {
-    shape.setFillColor(sf::Color(100, 250, 50));
+    shape.setFillColor(sf::Color::White);
+    setPosition(100, 100);
 }
 
 Block::~Block()
@@ -17,7 +17,7 @@ void Block::update(const sf::Time& frameTime)
 
 void Block::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    target.draw(shape);
+    target.draw(shape, states);
 }
 
 void Block::setPosition(const sf::Vector2f& position)

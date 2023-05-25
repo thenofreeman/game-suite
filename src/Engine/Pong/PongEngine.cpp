@@ -52,5 +52,4 @@ void PongEngine::draw()
         window->draw(*pl);
 
     window->draw(ball);
-
 }

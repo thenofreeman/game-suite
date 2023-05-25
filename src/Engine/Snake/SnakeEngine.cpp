@@ -1,16 +1,15 @@
 #include "SnakeEngine.h"
 
 SnakeEngine::SnakeEngine(sf::RenderWindow& window)
-    : Engine{window}
+    : Engine{window},
+      snake{}
 { }
 
 SnakeEngine::~SnakeEngine()
 { }
 
 void SnakeEngine::handleEvent(const sf::Event& event)
-{
-    // snake.processEvent(event);
-}
+{ }
 
 void SnakeEngine::update(sf::Time deltaTime)
 {
